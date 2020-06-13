@@ -1,6 +1,8 @@
 # http-localhost-8888-notebooks-PycharmProjects-George-20scheduler.ipynb
 
-connfig import config
+import psycopg2
+from config import config
+
 
 
 def create_tables():
