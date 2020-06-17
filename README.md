@@ -8,13 +8,35 @@ def create_tables():
     commands = (
         """
         CREATE TABLE George Scheduler App (
-            User_id SERIAL PRIMARY KEY,
+            User_id Integer PRIMARY KEY,
             User_name VARCHAR(255) NOT NULL,
             Assigned_to CHAR (255) NOT NULL,
             Task _Description CHAR (255) NOT NULL,
             Deadline_date  (int) not null,
         )
         """,
+        
+rom . import db
+
+class Wizard(UserMixin, db.Model):
+    """
+        Represents a wizard who can access special parts of the application.
+    """
+    __tablename__ = 'George Scheduler'
+    User_id = db.Column(db.Integer, primary_key=True)
+    Assigned_to = db.Column(db.String(64), unique=True, index=True)
+    Task _Description CHAR (255) NOT NULL,
+    Deadline_date  (int) not null,
+     )"""
+     '
+    password_hash = db.Column(db.String(128))
+
+    def __init__(self, wizard_name, password):
+        self.wizard_name = wizard_name
+        self.password = password
+        
+        
+        
         
         
         
